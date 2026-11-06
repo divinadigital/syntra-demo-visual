@@ -1,0 +1,14 @@
+/* Só da demonstração: selo fixo e aviso curto. */
+#demo-selo {
+  position: fixed; right: 16px; bottom: 16px; z-index: 200;
+  padding: 7px 14px; border-radius: 999px; font: 600 12px/1.2 "Segoe UI", system-ui, sans-serif;
+  background: #0f4c81; color: #fff; box-shadow: 0 6px 20px rgba(15, 23, 42, 0.25); pointer-events: none;
+}
+#demo-aviso {
+  position: fixed; left: 50%; bottom: 64px; z-index: 210; transform: translate(-50%, 12px); opacity: 0;
+  padding: 10px 16px; border-radius: 12px; font: 500 13.5px/1.3 "Segoe UI", system-ui, sans-serif;
+  background: #0f172a; color: #fff; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.2s ease, transform 0.2s ease; pointer-events: none;
+}
+#demo-aviso.on { opacity: 1; transform: translate(-50%, 0); }
+@media (prefers-reduced-motion: reduce) { #demo-aviso { transition: none; } }
